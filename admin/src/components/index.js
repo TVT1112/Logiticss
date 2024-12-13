@@ -1,2 +1,7 @@
 export {default as Navbar} from './Navbar/Navbar'
 export {default as Sidebar} from './Sidebar/Sidebar'
+export {default as Takenote} from './Takenote/Takenote'
+export {default as Target} from './Target/Target'
+export {default as FileWord} from './FileWord/FileWord'
+export {default as Loginpopup} from './Loginpopup/Loginpopup'
+export {default as Chatpage} from './Chatpage/Chatpage'

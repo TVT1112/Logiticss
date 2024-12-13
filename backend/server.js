@@ -6,6 +6,9 @@ import userRouter from "./routes/userRouter.js"
 import 'dotenv/config'
 import cartRouter from "./routes/cartRouter.js"
 import orderRouter from "./routes/orderRouter.js"
+import noteRouter from "./routes/noteRouter.js"
+import targetRouter from "./routes/targetRouter.js"
+import adminuserRouter from "./routes/adminuserRouter.js"
 const PORT=4000
 
 const app = express()
@@ -23,6 +26,9 @@ app.use("/images",express.static('uploads'))
 app.use("/api/user",userRouter)
 app.use("/api/cart",cartRouter)
 app.use("/api/order",orderRouter)
+app.use("/api/note",noteRouter)
+app.use("/api/target",targetRouter)
+app.use("/api/adminuser",adminuserRouter)
 
 app.get("/",(req,res)=>{
     res.send("api hoạt động")

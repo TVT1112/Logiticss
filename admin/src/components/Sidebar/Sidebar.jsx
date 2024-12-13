@@ -1,12 +1,30 @@
 import React from 'react'
 import './Sidebar.css'
 import {NavLink} from 'react-router-dom'
-import { BiPlus ,BiListUl,BiSolidShoppingBag  } from "react-icons/bi";
+import { BiPlus ,BiListUl,BiSolidShoppingBag,BiBarChartSquare  } from "react-icons/bi";
 
-const Sidebar = () => {
+const Sidebar = ({type}) => {
   return (
     <div className='sidebar'>
-      <div className='sidebar-options'>
+      {type==="Admin"?(
+        <div className='sidebar-options'>
+        <NavLink to='/order' className='sidebar-option'>
+            <BiSolidShoppingBag className='sidebar-icon'/>
+            <p>Các đơn hàng</p>
+        </NavLink>
+        <NavLink to='/plan' className='sidebar-option'>
+            <BiBarChartSquare className='sidebar-icon'/>
+            <p>Trang lên kế hoạch</p>
+        </NavLink>
+        <NavLink to='/chatpage' className='sidebar-option'>
+            <BiBarChartSquare className='sidebar-icon'/>
+            <p>Trang nhắn tin</p>
+        </NavLink>
+        </div>
+      ):<></>
+      }
+      {type==="storehouser"?(
+        (<div className='sidebar-options'>
         <NavLink to='/add' className='sidebar-option'>
             <BiPlus className='sidebar-icon'/>
             <p>Thêm sản phẩm</p>
@@ -15,11 +33,9 @@ const Sidebar = () => {
             <BiListUl className='sidebar-icon'/>
             <p>Danh sách sản phẩm</p>
         </NavLink>
-        <NavLink to='/order' className='sidebar-option'>
-            <BiSolidShoppingBag className='sidebar-icon'/>
-            <p>Các đơn hàng</p>
-        </NavLink>
-      </div>
+        </div>) 
+      ):<></>}
+      
     
     </div>
   )

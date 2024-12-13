@@ -66,11 +66,11 @@ const Order = ({url}) => {
                   </p>
                   
                 </div>
-                <p>Số lượng món ăn: {order.items.length}</p>
+                <p>Số lượng sản phẩm: {order.items.length}</p>
                   <p>{order.amount}.000 vnđ</p>
                   <select onChange={(event)=>statusHandler(event,order._id)} value={order.status}>
-                      <option value="Đang chuẩn bị món">Đang chuẩn bị món</option>
-                      <option value="Đã hết món">Đã hết món</option>
+                      <option value="Đang chuẩn bị">Đang chuẩn bị</option>
+                      <option value="Đã hết sản phẩm">Đã hết sản phẩm</option>
                       <option value="Đã giao thành công">Đã giao thành công</option>
                   </select>
             </div>  
